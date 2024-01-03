@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="background_wrap">
         <img src="@/assets/mainpage.jpg" alt="">
     </div>
 </template>
@@ -11,5 +11,11 @@
 </script>
 
 <style scoped>
-    
+    .background_wrap{
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
 </style>
