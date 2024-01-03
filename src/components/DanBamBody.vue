@@ -1,6 +1,6 @@
 <template>
     <div class="background_wrap">
-        <img src="@/assets/mainpage.jpg" alt="">
+        <img src="@/assets/mainpage.jpg">
     </div>
 </template>
 

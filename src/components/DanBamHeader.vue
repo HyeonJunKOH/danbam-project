@@ -2,14 +2,18 @@
     <div class="wrap">
         <div class="head_wrap">
             <div class="head">
-                <h1>DANBAM COFEE</h1>
-                <span>단밤 스토리</span>
-                <span>메뉴 소개</span>
-                <span>메뉴 주문</span>
-                <span>매장</span>
-                <span>단밤 소식</span>
-                <span>회원가입</span>
-                <span>로그인</span>
+                <div class="head_logo">
+                    <h1>DANBAM COFEE</h1>
+                </div>
+                <div class="head_menu">
+                    <ul>
+                        <li>단밤 스토리</li>
+                        <li>메뉴 소개</li>
+                        <li>메뉴 주문</li>
+                        <li>매장</li>
+                        <li>단밤 소식</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -38,15 +42,32 @@
         vertical-align: middle;
         padding: 0px, 20px;
         text-align: center;
-        display: flex; /* Flexbox 사용 */
-        justify-content: space-between; /* 요소들 사이의 간격을 최대로 설정 */
-        align-items: center;
     }
     .head_wrap.head{
         width: 100%;
         max-width: 1280px;
         margin: 0, auto;
         position: relative;
+        box-sizing: border-box;
+    }
+    .head_menu{
+        width: 100%;
+        padding: 0, 300px;
+    }
+    .head_menu>ul{
+        display: table;
+        width: 100%;
+    }
+    ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+    .head_menu>ul>li{
+        display: table-cell;
+    }
+    li{
+    
     }
     
 </style>
