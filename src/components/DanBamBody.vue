@@ -1,6 +1,6 @@
 <template>
     <div class="background_wrap">
-        <img src="@/assets/mainpage.jpg">
+        <img class="main_img" src="@/assets/mainpage.jpg">
     </div>
 </template>
 
@@ -17,5 +17,8 @@
         display: block;
         position: relative;
         z-index: 1;
+    }
+    .main_img{
+        margin-top: -60px;
     }
 </style>
