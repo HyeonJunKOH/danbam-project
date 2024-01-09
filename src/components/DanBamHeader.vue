@@ -37,6 +37,7 @@
     width: 100%;
     position: relative; /* 상대 위치 지정 */
 }
+/* 상단 배너 */
 .head_wrap {
     position: fixed; 
     top: 0;
@@ -55,14 +56,18 @@
     box-sizing: border-box;
     display: flex;
 }
+/* 회원가입 */
 .head_login{
     position: absolute;
     right: 137px;
     top: 30px;
+    font-weight: 550;
 }
+/* 로그인 */
 .head_sign{
     margin-right: 30px;
 }
+/* 상단 메뉴바 */
 .head_menu{
     width: 100%;
     padding: 0, 300px;
