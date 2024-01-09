@@ -4,13 +4,13 @@
             <ul>
                 <li>
                     <a href="">
-                        <div>고객센터</div>
-                        <div>문의/접수</div>
+                        <div class="table">고객센터</div>
+                        <div class="table0">문의/접수</div>
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        <div>메뉴 주문</div>
+                        <div class="table1">메뉴 주문</div>
                     </a>
                 </li>
             </ul>
@@ -33,8 +33,33 @@
         font-size: 0.9rem;
         z-index: 3;
     }
-    .nav{
+    .nav > ul >li{
         list-style: none;
-        
+        background: #FFDAB9;
+        overflow: hidden;
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.3);
+        margin-bottom: 15px;
+    }
+    .nav > ul >li > a{
+        display: block;
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    .table{
+        margin-top: 30px;
+        font-weight: 550;
+    }
+    .table0{
+        font-weight: 550;
+        font-size: 1.2rem;
+    }
+    .table1{
+        margin-top: 40px;
+        font-weight: 550;
+        font-size: 1.2rem;
     }
 </style>
