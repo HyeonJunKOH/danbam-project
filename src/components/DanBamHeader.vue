@@ -48,6 +48,11 @@
     padding: 0px, 20px;
     text-align: center;
 }
+/* 상단 배너 효과 */
+.head_wrap:hover{
+    background: #fff;
+    box-shadow: 0px, 0px, 5px, 0px rgba(0, 0, 0, 0.1);
+}
 .head_wrap.head{
     width: 100%;
     max-width: 1280px;
@@ -62,6 +67,7 @@
     right: 137px;
     top: 30px;
     font-weight: 550;
+    cursor: pointer;
 }
 /* 로그인 */
 .head_sign{
@@ -83,6 +89,7 @@ ul{
 }
 .head_menu>ul>li{
     display: table-cell;
+    cursor: pointer;
 }
 li{
     font-weight: 550;

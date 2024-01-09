@@ -25,6 +25,7 @@
 </script>
 
 <style scoped>
+    /* 네비바 전체 */
     .nav_wrap{
         position: fixed;
         right: 30px;
@@ -33,6 +34,7 @@
         font-size: 0.9rem;
         z-index: 3;
     }
+    /* 네비바 스타일 */
     .nav > ul >li{
         list-style: none;
         background: #FFDAB9;
@@ -49,14 +51,17 @@
         color: black;
         cursor: pointer;
     }
+    /* 고객센터 */
     .table{
         margin-top: 30px;
         font-weight: 550;
     }
+    /* 문의접수 */
     .table0{
         font-weight: 550;
         font-size: 1.2rem;
     }
+    /* 메뉴 주문 */
     .table1{
         margin-top: 40px;
         font-weight: 550;
