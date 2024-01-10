@@ -11,11 +11,74 @@
                 </div>
                 <div class="head_menu">
                     <ul>
-                        <li>단밤 스토리</li>
-                        <li>메뉴 소개</li>
-                        <li>메뉴 주문</li>
-                        <li>매장</li>
-                        <li>단밤 소식</li>
+                        <li>
+                            <a href="">단밤 스토리</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="">브랜드</a>
+                                    </li>
+                                    <li>
+                                        <a href="">오시는 길</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">메뉴 소개</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="">음료</a>
+                                    </li>
+                                    <li>
+                                        <a href="">푸드</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">메뉴 주문</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="">장바구니</a>
+                                    </li>
+                                    <li>
+                                        <a href="">주문내역</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">매장</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="">매장 찾기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">단밤 소식</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="">공지사항</a>
+                                    </li>
+                                    <li>
+                                        <a href="">이벤트</a>
+                                    </li>
+                                    <li>
+                                        <a href="">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="">고객의 소리</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
