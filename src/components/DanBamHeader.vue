@@ -6,8 +6,12 @@
                     <h1>DANBAM COFEE</h1>
                 </div>
                 <div class="head_login">
-                    <span class="head_sign">회원가입</span>
-                    <span>로그인</span>
+                    <a href="">
+                        <span class="head_sign">회원가입</span>
+                    </a>
+                    <a href="">
+                        <span>로그인</span>
+                    </a>
                 </div>
                 <div class="head_menu">
                     <ul>
@@ -93,8 +97,12 @@
 </script>
 
 <style scoped>
-    div {
+div {
     display: block;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .wrap{
     width: 100%;
@@ -153,8 +161,6 @@ ul{
 .head_menu>ul>li{
     display: table-cell;
     cursor: pointer;
-}
-li{
     font-weight: 550;
 }
 
