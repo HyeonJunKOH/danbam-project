@@ -10,74 +10,74 @@
                         <span class="head_sign">회원가입</span>
                     </a>
                     <a href="">
-                        <span>로그인</span>
+                        <span class="login">로그인</span>
                     </a>
                 </div>
                 <div class="head_menu">
                     <ul>
-                        <li>
+                        <li @mouseover="showMenu(1)" @mouseleave="hideMenu()">
                             <a href="">단밤 스토리</a>
-                            <div>
+                            <div class="menu_list" v-show="showMenuList === 1">
                                 <ul>
-                                    <li>
+                                    <li class="list">
                                         <a href="">브랜드</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">오시는 길</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li @mouseover="showMenu(2)" @mouseleave="hideMenu()">
                             <a href="">메뉴 소개</a>
-                            <div>
+                            <div class="menu_list1" v-show="showMenuList === 2">
                                 <ul>
-                                    <li>
+                                    <li class="list">
                                         <a href="">음료</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">푸드</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li @mouseover="showMenu(3)" @mouseleave="hideMenu()">
                             <a href="">메뉴 주문</a>
-                            <div>
+                            <div class="menu_list2" v-show="showMenuList === 3">
                                 <ul>
-                                    <li>
+                                    <li class="list">
                                         <a href="">장바구니</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">주문내역</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li @mouseover="showMenu(4)" @mouseleave="hideMenu()">
                             <a href="">매장</a>
-                            <div>
+                            <div class="menu_list3" v-show="showMenuList === 4">
                                 <ul>
-                                    <li>
+                                    <li class="list">
                                         <a href="">매장 찾기</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li>
+                        <li @mouseover="showMenu(5)" @mouseleave="hideMenu()">
                             <a href="">단밤 소식</a>
-                            <div>
+                            <div class="menu_list4" v-show="showMenuList === 5">
                                 <ul>
-                                    <li>
+                                    <li class="list">
                                         <a href="">공지사항</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">이벤트</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">FAQ</a>
                                     </li>
-                                    <li>
+                                    <li class="list">
                                         <a href="">고객의 소리</a>
                                     </li>
                                 </ul>
@@ -92,7 +92,21 @@
 
 <script>
     export default {
-        
+        data(){
+            return{
+                showMenuList: 0,
+                isUnderlined:false
+            }
+        },
+        methods:{
+            showMenu(menuIndex){
+                this.showMenuList = menuIndex
+
+            },
+            hideMenu(){
+                this.showMenuList = 0;
+            }
+        }
     }
 </script>
 
@@ -104,9 +118,10 @@ a{
     text-decoration: none;
     color: black;
 }
+/* 전체 위치 고정 */
 .wrap{
     width: 100%;
-    position: relative; /* 상대 위치 지정 */
+    position: relative;
 }
 /* 상단 배너 */
 .head_wrap {
@@ -160,8 +175,42 @@ ul{
 }
 .head_menu>ul>li{
     display: table-cell;
-    cursor: pointer;
     font-weight: 550;
 }
-
+.menu_list,.menu_list1,.menu_list2,.menu_list3,.menu_list4{
+    padding: 20px;
+}
+.list{
+    padding-bottom: 10px;
+}
+.list > a{
+    display: inline-block;
+    position: relative;
+}
+.list > a::after{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: all .5s;
+}
+.list > a::before{
+    content:"";
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: all .5s;
+}
+.list > a:hover::after{
+    width: 50%;
+}
+.list > a:hover::before{
+    width: 50%;
+}
 </style>
