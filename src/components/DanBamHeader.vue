@@ -28,7 +28,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <li @mouseover="showMenu(2)" @mouseleave="hideMenu()">
+                        <li class="menu" @mouseover="showMenu(2)" @mouseleave="hideMenu()">
                             <a href="">메뉴 소개</a>
                             <div class="menu_list1" v-show="showMenuList === 2">
                                 <ul>
@@ -133,20 +133,10 @@ a{
     vertical-align: middle;
     padding: 0px, 20px;
     text-align: center;
-    background: #fff;
-    transition: background 0.5s ease-in; /* 트랜지션 속성 추가 */
 }
 /* 상단 배너 효과 */
 .head_wrap:hover{
-    animation: fadeInBackground 5s ease-in;
-}
-@keyframes fadeInBackground {
-    from {
-        background: #fff;
-    }
-    to {
-        background: rgba(255, 255, 255, 0);
-    }
+    background-color: #fff;
 }
 
 .head_wrap.head{
@@ -189,11 +179,12 @@ ul{
     font-weight: 550;
     flex: 1;
 }
-/* 상단 메뉴바 백그라운드 컬러 지정 */
-.menu:hover{
+.head_menu>ul>li:hover{
     background-color:#FFC314;
-    width: 100px;
+    width: 50%;
 }
+/* 상단 메뉴바 백그라운드 컬러 지정 */
+
 
 /* 하위 메뉴 리스트  */
 .menu_list,.menu_list1,.menu_list2,.menu_list3,.menu_list4{
