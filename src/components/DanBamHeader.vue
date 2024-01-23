@@ -15,7 +15,7 @@
                 </div>
                 <div class="head_menu">
                     <ul>
-                        <li @mouseover="showMenu(1)" @mouseleave="hideMenu()">
+                        <li class="menu" @mouseover="showMenu(1)" @mouseleave="hideMenu()">
                             <a href="">단밤 스토리</a>
                             <div class="menu_list" v-show="showMenuList === 1">
                                 <ul>
@@ -133,12 +133,22 @@ a{
     vertical-align: middle;
     padding: 0px, 20px;
     text-align: center;
+    background: #fff;
+    transition: background 0.5s ease-in; /* 트랜지션 속성 추가 */
 }
 /* 상단 배너 효과 */
 .head_wrap:hover{
-    background: #fff;
-    box-shadow: 0px, 0px, 5px, 0px rgba(0, 0, 0, 0.1);
+    animation: fadeInBackground 5s ease-in;
 }
+@keyframes fadeInBackground {
+    from {
+        background: #fff;
+    }
+    to {
+        background: rgba(255, 255, 255, 0);
+    }
+}
+
 .head_wrap.head{
     width: 100%;
     max-width: 1280px;
@@ -159,30 +169,40 @@ a{
 .head_sign{
     margin-right: 30px;
 }
+/* 전체 ul 스타일 지정 */
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
 /* 상단 메뉴바 */
 .head_menu{
     width: 100%;
     padding: 0, 300px;
 }
 .head_menu>ul{
-    display: table;
-    width: 100%;
-}
-ul{
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
+    display: flex;
+    justify-content: space-between;
 }
 .head_menu>ul>li{
     display: table-cell;
     font-weight: 550;
+    flex: 1;
 }
+/* 상단 메뉴바 백그라운드 컬러 지정 */
+.menu:hover{
+    background-color:#FFC314;
+    width: 100px;
+}
+
+/* 하위 메뉴 리스트  */
 .menu_list,.menu_list1,.menu_list2,.menu_list3,.menu_list4{
     padding: 20px;
 }
 .list{
     padding-bottom: 10px;
 }
+/* 하위 메뉴 리스트 underline 스타일 지정 시작 */
 .list > a{
     display: inline-block;
     position: relative;
@@ -213,4 +233,5 @@ ul{
 .list > a:hover::before{
     width: 50%;
 }
+/* 하위 메뉴 리스트 underline 스타일 지정 끝 */
 </style>
