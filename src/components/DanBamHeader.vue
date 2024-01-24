@@ -206,7 +206,7 @@ ul{
     width: 0;
     height: 1px;
     background-color: black;
-    transition: all .5s;
+    transition: all .3s;
 }
 .list > a::before{
     content:"";
@@ -216,7 +216,7 @@ ul{
     width: 0;
     height: 1px;
     background-color: black;
-    transition: all .5s;
+    transition: all .3s;
 }
 .list > a:hover::after{
     width: 50%;

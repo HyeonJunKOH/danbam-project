@@ -37,7 +37,7 @@
     /* 네비바 스타일 */
     .nav > ul >li{
         list-style: none;
-        background: #FFDAB9;
+        background: #E6B36D;
         overflow: hidden;
         width: 110px;
         height: 110px;
@@ -55,6 +55,9 @@
     .table{
         margin-top: 30px;
         font-weight: 550;
+    }
+    .nav > ul > li:hover{
+        background-color: #FFC314;
     }
     /* 문의접수 */
     .table0{
