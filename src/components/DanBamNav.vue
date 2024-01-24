@@ -37,7 +37,7 @@
     /* 네비바 스타일 */
     .nav > ul >li{
         list-style: none;
-        background: #E6B36D;
+        background: #FAE6B9;
         overflow: hidden;
         width: 110px;
         height: 110px;

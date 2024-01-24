@@ -15,8 +15,8 @@
                 </div>
                 <div class="head_menu">
                     <ul>
-                        <li class="menu" @mouseover="showMenu(1)" @mouseleave="hideMenu()">
-                            <a href="">단밤 스토리</a>
+                        <li @mouseover="showMenu(1)" @mouseleave="hideMenu()">
+                            <a class="menu" href="">단밤 스토리</a>
                             <div class="menu_list" v-show="showMenuList === 1">
                                 <ul>
                                     <li class="list">
@@ -28,8 +28,8 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu" @mouseover="showMenu(2)" @mouseleave="hideMenu()">
-                            <a href="">메뉴 소개</a>
+                        <li @mouseover="showMenu(2)" @mouseleave="hideMenu()">
+                            <a class="menu" href="">메뉴 소개</a>
                             <div class="menu_list1" v-show="showMenuList === 2">
                                 <ul>
                                     <li class="list">
@@ -42,7 +42,7 @@
                             </div>
                         </li>
                         <li @mouseover="showMenu(3)" @mouseleave="hideMenu()">
-                            <a href="">메뉴 주문</a>
+                            <a class="menu" href="">메뉴 주문</a>
                             <div class="menu_list2" v-show="showMenuList === 3">
                                 <ul>
                                     <li class="list">
@@ -55,7 +55,7 @@
                             </div>
                         </li>
                         <li @mouseover="showMenu(4)" @mouseleave="hideMenu()">
-                            <a href="">매장</a>
+                            <a class="menu" href="">매장</a>
                             <div class="menu_list3" v-show="showMenuList === 4">
                                 <ul>
                                     <li class="list">
@@ -65,7 +65,7 @@
                             </div>
                         </li>
                         <li @mouseover="showMenu(5)" @mouseleave="hideMenu()">
-                            <a href="">단밤 소식</a>
+                            <a class="menu" href="">단밤 소식</a>
                             <div class="menu_list4" v-show="showMenuList === 5">
                                 <ul>
                                     <li class="list">
@@ -147,7 +147,7 @@ a{
     box-sizing: border-box;
     display: flex;
 }
-/* 회원가입 */
+/* 회원가입 로그인 설정 */
 .head_login{
     position: absolute;
     right: 137px;
@@ -155,9 +155,16 @@ a{
     font-weight: 550;
     cursor: pointer;
 }
-/* 로그인 */
+/* 회원가입 */
 .head_sign{
     margin-right: 30px;
+}
+.head_sign:hover{
+    text-decoration: underline;
+}
+/* 로그인 */
+.login:hover{
+    text-decoration: underline;
 }
 /* 전체 ul 스타일 지정 */
 ul{
@@ -186,19 +193,24 @@ ul{
 /* 상단 메뉴바 백그라운드 컬러 지정 */
 
 
-/* 하위 메뉴 리스트  */
+/* 하위 메뉴 리스트 시작  */
 .menu_list,.menu_list1,.menu_list2,.menu_list3,.menu_list4{
     padding: 20px;
 }
 .list{
     padding-bottom: 10px;
 }
-/* 하위 메뉴 리스트 underline 스타일 지정 시작 */
-.list > a{
+.list:hover{
+    text-decoration: underline;
+}
+/* 하위 메뉴 리스트 끝 */
+
+/* 메뉴 리스트 underline 스타일 지정 시작 */
+.menu{
     display: inline-block;
     position: relative;
 }
-.list > a::after{
+.menu::after{
     content:"";
     position: absolute;
     left: 50%;
@@ -208,7 +220,7 @@ ul{
     background-color: black;
     transition: all .3s;
 }
-.list > a::before{
+.menu::before{
     content:"";
     position: absolute;
     right: 50%;
@@ -218,11 +230,11 @@ ul{
     background-color: black;
     transition: all .3s;
 }
-.list > a:hover::after{
+.menu:hover::after{
     width: 50%;
 }
-.list > a:hover::before{
+.menu:hover::before{
     width: 50%;
 }
-/* 하위 메뉴 리스트 underline 스타일 지정 끝 */
+/* 메뉴 리스트 underline 스타일 지정 끝 */
 </style>
