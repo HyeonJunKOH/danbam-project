@@ -24,5 +24,18 @@
     padding: 30px;
     text-align: left;
     z-index: 1;
+    font-weight: 900;
+}
+.chap_wrap>ul{
+    position: relative;
+}
+.chap_wrap li {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 </style>
