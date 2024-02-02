@@ -133,12 +133,8 @@ a{
     vertical-align: middle;
     padding: 0px, 20px;
     text-align: center;
-}
-/* 상단 배너 효과 */
-.head_wrap:hover{
     background-color: #fff;
 }
-
 .head_wrap.head{
     width: 100%;
     max-width: 1280px;
