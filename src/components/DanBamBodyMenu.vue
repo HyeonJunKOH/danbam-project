@@ -1,10 +1,6 @@
 <template>
-    <div>
-        <div class="background_wrap">
-            <img class="main_img" src="@/assets/mainpage.jpg">
-        </div>
-
-        <div v-show="!showImage">
+    <div id="main">
+        <div v-scroll:#main="handleScroll">
             단밤커피 딸기 시즌 신메뉴
         </div>
         <div>
@@ -18,40 +14,21 @@
 export default {
     data(){
         return{
-            showImage: true
-        };
-    },
-    mounted() {
-        window.addEventListener('scroll',this.handleScroll);
-    },
-    beforeUnmount() {
-        window.removeEventListener('scroll',this.handleScroll);
+            scrollPostion : 0
+        }
     },
     methods:{
-        handleScroll(){
-            // 여기에서 스크롤 위치에 따라 showImage 상태 업데이트
-            // 예: 스크롤이 특정 위치 이상이면 showImage를 false로 업데이트
-            // 아니면 true로 유지
-            if(window.scrollY > 200){
-                this.showImage = false;
+        handleScroll(e){
+            this.scrollPostion = e.target.scrollTop;
+
+            if(this.scrollPostion > 100){
+                console.log("UP")
             } else {
-                this.showImage = true;
+                console.log("DOWN")
             }
         }
     }
 }
 </script>
 <style scoped>
-.background_wrap {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-.main_img {
-  max-width: 100%;
-  height: auto;
-}
 </style>
